@@ -15,6 +15,12 @@ fun consoleLog(tag: String, msg: String) {
 
 @OptIn(ExperimentalJsExport::class)
 @JsExport
+fun asyncSum(a:Int, b:Int, block:(Int)->Unit) {
+    getKmpPlatform().asyncSum(a, b, block)
+}
+
+@OptIn(ExperimentalJsExport::class)
+@JsExport
 class ExportClass {
     fun print() {
         consoleLog("ExportClass", "print")

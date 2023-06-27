@@ -22,6 +22,10 @@
         shared.consoleLog("shared.consoleLog","测试控制台日志输出");
         //调用类示例
         new shared.ExportClass().print();
+        //调用回调函数
+        shared.asyncSum(1, 2, function (result) {
+            console.log("shared.asyncSum",result);
+        });
     }
 </script>
 </html>

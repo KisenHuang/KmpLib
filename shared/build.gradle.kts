@@ -34,7 +34,12 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                //添加Kotlin 协程库，处理异步操作
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
+            }
+        }
 
         val androidMain by getting
 
