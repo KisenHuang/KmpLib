@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test File</title>
+    <script src="shared.js"></script>
+</head>
+<body>
+<h1>Test Page</h1>
+
+<button onclick="print()">print</button>
+
+</body>
+
+<script>
+    console.log("window", window);
+
+    function print() {
+        // 定义shared，通过window.shared获取到shared.js中的内容
+        var shared = window.shared;
+        //调用函数示例
+        shared.consoleLog("shared.consoleLog","测试控制台日志输出");
+        //调用类示例
+        new shared.ExportClass().print();
+    }
+</script>
+</html>
